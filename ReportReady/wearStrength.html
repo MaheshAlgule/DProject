@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type='text/css' media='screen' href='wearStrength.css'>
+    <title>Wear Strength</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Wear Strength<a href="index.html"><span  id="span">Home</span></a>
+                <!-- <a href="help.html"><span id="span">Help</span></a></h2> -->
+        </div>
+        <div id="form" class="form">
+            <div class="form-control">
+                <label for="BeamStrength">Beam Strength:</label>
+                <input id="BeamStrength"type="text" disabled>
+            </div>
+            <div class="form-control">
+                <label for="dynamicEffectiveLoad">Dynamic Effective Load:</label>
+                <input id="dynamicEffectiveLoad" type="text" disabled>
+            </div>
+            <div class="form-control">
+                <label for="WearStrength">Wear Strength</label>
+                <input id="WearStrength"type="text" disabled>
+            </div>
+           
+                <span id="comment">Select finer Grade Of Machining for safe design</span>
+        
+            <div class="form-control">
+           
+                <label for="grade">Grade of Machining:</label>
+                <select id="grade" onchange="checkWearStergth()">
+                    <option value="0.80+(0.06*fi)">Grade1</option>
+                    <option value="1.25+(0.10*fi)">Grade2</option>
+                    <option value="2.00+(0.16*fi)">Grade3</option>
+                    <option value="3.20+(0.25*fi)">Grade4</option>
+                    <option value="5.00+(0.40*fi)">Grade5</option>
+                    <option value="8.00+(0.63*fi)">Grade6</option>
+                    <option value="11.00+(0.90*fi)">Grade7</option>
+                    <option value="16.00+(1.25*fi)">Grade8</option>
+                    <option value="22.00+(1.80*fi)">Grade9</option>
+                    <option value="32.00+(2.50*fi)">Grade10</option>
+                    <option value="45.00+(3.55*fi)">Grade11</option>
+                    <option value="63.00+(5.00*fi)">Grade12</option>
+                </select>
+            </div>
+            <div class="form-control">
+                <label for="saftey">Note:</label>
+                <label id="result"></label>
+            </div>
+            <div class="form-control">
+               <button id="beamStrength">Beam Strength Design</button>
+                <button id='inputPage'>Inputs</button>
+                <button id='resultPage'>Result</button>
+             </div>
+
+</div>
+
+    
+    <script src="wearStrength.js"></script>
+</body>
+
+</html>

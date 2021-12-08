@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type='text/css' media='screen' href='beamStrength.css'>
+
+    <title>Beam Strength</title>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="header">
+        <h2>Beam Strength <a href="index.html"><span  id="span">Home</span></a>
+            <!-- <a href="help.html"><span id="span">Help</span></a></h2> -->
+        
+
+
+    </div>
+    <div id="form" class="form">
+        <div class="form-control">
+            <label for=calculatedModule>Calculated Module : </label>
+            <input id='calculatedModule' type="number" disabled>
+        </div>
+        <div class="form-control">
+
+            <div class="container-div" onload="checkTheDesign()">
+                <label for="choise1">Select Module from below choise :</label>
+                <select id="choise1" onchange="checkTheDesign()"></select>
+            </div>
+
+        </div>
+        <div class="form-control">
+            <label for="saftey">Note:</label>
+            <label id=saftey></lable>
+        </div>
+        <div class="form-control">
+            <button id='wearStrength'> Wear Strength Design</button>
+            <button id='inputPage'>Inputs</button>
+            <button id='resultPage'>Result</button>
+        </div>
+    </div>
+</div>
+
+
+
+  
+   <script src="beamStrength.js"></script>
+</body>
+
+</html>

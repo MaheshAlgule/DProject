@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="flex-view.css">
+    <title>Gear Design Suit</title>
+</head>
+<body>
+    <div class="flex-container">
+
+        <div class="header">
+            <h2>Spur Gear Design</h2>
+        </div>
+        <label class="require">* It is required input</label>
+        <div id="form" class="form"> 
+       
+
+        <div class="div02 form-control"> <label for="power">Power(kw)<span class="star"> *</span>:</label>
+            <input type="number" id="power" step="1"  value="22.5" disabled></input>
+            <small>Error message</small>
+        </div>
+<!-- 
+        <div class="div03 form-control"><label for="centerDistance">Center Distance:</label>
+            <input type="number" id="centerDistance" onchange="checkCenterDis()"></input>
+        
+            <small>Error message</small>
+        </div> -->
+
+        <div class="div04 form-control">
+            <label for="speedOfPinion">Speed Of Pinion:</label>
+            <input type="number" id="speedOfPinion" value="360" disabled onchange="checkSpeedOfPinion()"></input>
+           </i>
+            <small>Error message</small>
+        </div>
+
+        <div class="div05 form-control">
+            <label for="speedOfGear">Speed Of Gear:</label>
+            <input type="number" id="speedOfGear" value="1440" disabled onchange="checkSpeedOfGear()"></input>
+            <small>Error message</small>
+        </div>
+
+        <div class="div06 form-control">
+            <label for="gearRatio">Gear Ratio<span class="star"> *:</label>
+            <input type="number" id="gearRatio" value="4" disabled onchange="checkGearRatio()"></input>
+            <small>Error message</small>
+        </div>
+
+        <div class="div07 form-control">
+            <label for="teethOnPinion">Teeth on pinion:</label>
+            <input type="number" id="teethOnPinion" value="18" disabled onchange="checkTeethOnPinion()"></input>
+            <small>Error message</small>
+        </div>
+
+        <div class="div08 form-control">
+            <label for="teethOnGear">Teeth on gear:</label>
+            <input type="number" id="teethOnGear" value="72" disabled onchange="checkTeethOnGear()"></input>
+            <small>Error message</small>
+        </div>
+
+        <div class="div12 form-control">
+            <label for="serviceFactor">Service Factor:</label>
+            <input type="number" id="serviceFactor"value="1.5" disabled onchange="checkServiceFactorValue()" value='1'></input>
+            <small>Error message</small>
+
+        </div>
+
+        <div class="div13 form-control">
+            <label for="safteyFactor">Factor Of Saftey:</label>
+            <input type="number" id="safteyFactor"value="1.5" disabled onchange="checkSafteyFactorValue()" value='1' ></input>
+            <small>Error message</small>
+
+        </div>
+
+        <div class="div01 form-control">
+            <label class="label-of-div" for="pressureAngle">Pressure Angle<span class="star">&#42</span>:</label><br>
+            <input type="radio" id="pressureAngle" value="38" name="pressureAngle">
+            <label for="pressureAngle" class="light">14.5<sup>0</sup> full depth</label><br>
+            <input type="radio" id="pressureAngle" value="18" name="pressureAngle">
+            <label for="pressureAngle" class="light">20<sup>0</sup> full depth</label><br>
+            <input type="radio" id="pressureAngle" value="18" checked name="pressureAngle">
+            <label for="pressureAngle" class="light">20<sup>0</sup> stub</label><br>
+            <small>Error message</small>
+        </div>
+
+
+  <!--    <div class="div10 form-control">
+            <label for="module">Module:</label>
+            <input type="number" id="module"></input>
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+        </div>
+
+        <div class="div11 form-control">
+            <label for="faceWidth">Face width:</label>
+            <input type="number" id="faceWidth"></input>
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+        </div>-->  
+
+        
+
+        <div class="div14 form-control">
+            <label for="pinionMaterial">Pinion Material<span class="star"> *</span>:</label>
+            <select id=pinionMaterial>
+                <option                           ></option>
+                <option value='steel'             >Steel</option>
+                <option value="pcSteelFe"         >P.C Steel(Fe410)</option>
+                <option value="pcSteel40"         >P.C Steel(40C8)</option>
+                <option value='carbonSteel'       >Carbon steel(50C4)</option>
+                <option value="castSteel"selected >Cast steel</option>
+                <option value="spheroidalCastIron">Spheroidal cast iron</option>
+                <option value="castTinBronze"     >Cast tin bronze</option>
+                <option value='greyCastIron'      >Grey cast iron(FG200)</option>
+                <option value='tinBronze'         >Tin bronze</option>
+            </select>
+            <small>Error message</small>
+        </div>
+
+        <div class="div15 form-control">
+            <label for="gearMaterial">Gear Material<span class="star"> *</span>:</label>
+            <select id=gearMaterial>
+                <option                           ></option>
+                <option value='steel'>Steel</option>
+                <option value="pcSteelFe">P.C Steel(Fe410)</option>
+                <option value="pcSteel40">P.C Steel(40C8)</option>
+                <option value='carbonSteel'>Carbon steel(50C4)</option>
+                <option value="castSteel" selected>Cast steel</option>
+                <option value="spheroidalCastIron">Spheroidal cast iron</option>
+                <option value="castTinBronze">Cast tin bronze</option>
+                <option value='greyCastIron'>Grey cast iron(FG200)</option>
+                <option value='tinBronze'>Tin bronze</option>
+            </select>
+            <small>Error message</small>
+        </div>
+
+        <div class="div16 form-control">
+            <label for="grade">Grade of Machining<span class="star"> *</span>:</label>
+            <select id="grade" >
+                <option                           ></option>
+                <option value="0.80+(0.06*fi)">Grade1</option>
+                <option value="1.25+(0.10*fi)">Grade2</option>
+                <option value="2.00+(0.16*fi)">Grade3</option>
+                <option value="3.20+(0.25*fi)">Grade4</option>
+                <option value="5.00+(0.40*fi)">Grade5</option>
+                <option value="8.00+(0.63*fi)">Grade6</option>
+                <option value="11.00+(0.90*fi)">Grade7</option>
+                <option value="16.00+(1.25*fi)" selected >Grade8</option>
+                <option value="22.00+(1.80*fi)">Grade9</option>
+                <option value="32.00+(2.50*fi)">Grade10</option>
+                <option value="45.00+(3.55*fi)">Grade11</option>
+                <option value="63.00+(5.00*fi)">Grade12</option>
+            </select>
+            <small>Error message</small>
+
+        </div>
+        
+        <div class="div09 form-control">
+            <label for="manufacturing" >Manufacturing Process<span class="star" > *</span>:</label><br>
+            <input type="radio" id="manufacturing"  value="3/(3+v)" name="process">
+            <label for="manufacturing" class="light">Ordinary Cut</label><br>
+            <input type="radio" id="manufacturing" checked value="6/(6+v)" name="process">
+            <label for="manufacturing" class="light">Accurate Hobbed</label><br>
+            <input type="radio" id="manufacturing"  value="5.6/(5.6+Math.sqrt(v))" name="process">
+            <label for="manufacturing" class="light">Precision Finished </label><br>
+            <small>Error message</small>
+           
+        </div>
+     <a href="beamStrength.html"><button id="submit" type="submit">submit</button></a> 
+    </div>
+</div>
+    <!-- <script src="checkingInput.js"></script> -->
+</body>
+</html>

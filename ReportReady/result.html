@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="result.css">
+    <title>Result</title>
+</head>
+<body>
+    <a href="index.html"><h3>Home</h3></a><br>
+    <div id='HTMLtoPDF'>
+    <div class="inputInfo">
+        <p>Inputs:</p>
+        <table id='inputs'> 
+
+            <tr>
+                <th>Parameter</th>
+                <th>Value</th>
+              </tr>
+
+
+        </table>
+
+
+    </div>
+    <div class="beamStrengthInfo">
+        <p>Outputs:</p>
+        <table id='outputs'> 
+
+            <tr>
+                <th>Parameter</th>
+                <th>Value</th>
+              </tr>
+
+
+        </table>
+
+    </div>
+</div>
+<button onclick="HTMLtoPDF()">Download Pdf</button>
+<script src="result.js"></script>
+<script src="js/jspdf.js"></script>
+	<script src="js/jquery-2.1.3.js"></script>
+	<script src="js/pdfFromHTML.js"></script>
+
+
+
+
+
+
+</body>
+</html>
